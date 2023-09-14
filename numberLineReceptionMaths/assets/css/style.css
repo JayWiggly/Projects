@@ -12,3 +12,24 @@
     font-size: 32px;
     color: red;
 }
+
+.button {
+    background-color: #008CBA;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .inputBox {
+    height: 40px;
+    width: 40px;
+    size: 0px;
+    font-size: 32px;
+  }
