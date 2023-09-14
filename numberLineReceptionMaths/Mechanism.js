@@ -64,7 +64,7 @@ function populateSum(){
 
 function randonInteger(){
     //Create a random integer less than 10.
-    return Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+    return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
 }
 
 function isEven(number) {
