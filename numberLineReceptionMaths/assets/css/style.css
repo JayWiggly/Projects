@@ -1,0 +1,14 @@
+.arithmatic {
+    font-size: 32px;
+    color: goldenrod;
+}
+
+.correct {
+    font-size: 32px;
+    color: blue;
+}
+
+.incorrect {
+    font-size: 32px;
+    color: red;
+}

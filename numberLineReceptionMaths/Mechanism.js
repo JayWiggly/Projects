@@ -21,9 +21,11 @@ function main(){
         }
         
         if (userAnswerValue===calculatedAnswer) {
-            result.innerHTML = "You did it, well done.(" + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + userAnswerValue +")";
+            result.className = "correct"
+            result.innerHTML = "You did it Lily, well done.(" + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + userAnswerValue +")";
         }
         else{
+            result.className = "incorrect"
             result.innerHTML = "Try again (" + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + calculatedAnswer + " NOT " + userAnswerValue + ")";
         }        
     }
