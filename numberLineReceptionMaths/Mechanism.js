@@ -32,11 +32,11 @@ function main(){
 }
 
 function initialisePage(){    
-    let location = window.location.pathname;
-    let directoryPath = location.substring(0, location.lastIndexOf("/")+1);       
+    // let location = window.location.pathname;
+    // let directoryPath = location.substring(0, location.lastIndexOf("/")+1);       
 
-    let numberLineImage = document.getElementById('NumberLineImage');
-    numberLineImage.src = directoryPath + "NumberLineImage.jpg";
+    // let numberLineImage = document.getElementById('NumberLineImage');
+    // numberLineImage.src = directoryPath + "NumberLineImage.jpg";
 
     populateSum();
 }
