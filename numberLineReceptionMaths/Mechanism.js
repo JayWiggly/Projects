@@ -22,18 +22,14 @@ function main(){
         
         if (userAnswerValue===calculatedAnswer) {
             result.className = "correct"
-            result.innerHTML = "You did it Lily, well done.(" + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + userAnswerValue +")";
+            result.innerHTML = "You did it Lily, well done!( " + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + userAnswerValue +" )";
         }
         else{
             result.className = "incorrect"
-            result.innerHTML = "Try again (" + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + calculatedAnswer + " NOT " + userAnswerValue + ")";
+            result.innerHTML = "No, but try again ( " + firstNumberLabel.innerText + " " + operatorLabel.innerText + " " + secondNumerLabel.innerText + " = " + calculatedAnswer + " NOT " + userAnswerValue + " )";
         }        
     }
     userAnswer.value = "";
-    populateSum();
-}
-
-function initialisePage(){    
     populateSum();
 }
 
@@ -78,4 +74,4 @@ function isEven(number) {
 }
 
 //Listener for Button Click
-document.getElementById("runBtn").addEventListener("click", main);
+document.getElementById("answerBtn").addEventListener("click", main);
