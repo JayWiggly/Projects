@@ -22,11 +22,11 @@ function main(){
         
         if (userAnswerValue===calculatedAnswer) {
             result.className = "correct"
-            result.innerHTML = "You did it Lily, well done!( " + firstNumberLabel.innerText + operatorLabel.innerText + secondNumerLabel.innerText + "=" + userAnswerValue +" )";
+            result.innerHTML = "You did it! Well done! ( " + firstNumberLabel.innerText + " " +  operatorLabel.innerText + " " +  secondNumerLabel.innerText + " = " + userAnswerValue +" )";
         }
         else{
             result.className = "incorrect"
-            result.innerHTML = "No, but try again ( " + firstNumberLabel.innerText + " " + operatorLabel.innerText + " " + secondNumerLabel.innerText + " = " + calculatedAnswer + " NOT " + userAnswerValue + " )";
+            result.innerHTML = "Sorry, try again ( " + firstNumberLabel.innerText + " " + operatorLabel.innerText + " " + secondNumerLabel.innerText + " = " + calculatedAnswer + " not " + userAnswerValue + " )";
         }        
     }
     userAnswer.value = "";

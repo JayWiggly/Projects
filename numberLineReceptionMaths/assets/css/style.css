@@ -1,29 +1,36 @@
+.result {
+    font-family: Papyrus, fantasy;
+    font-size: larger;    
+}
+
 .arithmatic {
-    font-size: 32px;
-    color: goldenrod;
+    font-size: 64px;
+    color: rgb(218, 18, 185);
+    font-weight: bolder;
 }
 
 .correct {
     font-size: 32px;
     color: blue;
+    font-weight: bolder;
 }
 
 .incorrect {
     font-size: 32px;
     color: red;
+    font-weight: bolder;
 }
 
 .button {
-    background-color: #008CBA;
+    background-color: #db4aab;
     border-radius: 15px;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 24px;
     cursor: pointer;
   }
 
