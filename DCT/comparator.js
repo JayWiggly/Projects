@@ -28,8 +28,8 @@ function main(){
                 printLists(currentList, "Current");
                 const matches = differenceCheck(historyList,currentList);
                 printLists(matches, "Matches");            
-                const historyLabel = paintDifferences(historyList, matches, "#EC7063", "History");
-                const currentLabel = paintDifferences(currentList, matches, "#3498DB", "Current");
+                const historyLabel = paintDifferences(historyList, matches, "#EC7063", "DID #1");
+                const currentLabel = paintDifferences(currentList, matches, "#3498DB", "DID #2");
                 document.getElementById('summaryOfChanges').innerHTML = "Summary";
                 document.getElementById('displayHistory').innerHTML = historyLabel;
                 document.getElementById('displayCurrent').innerHTML = currentLabel;
@@ -242,10 +242,10 @@ function generateDiffTable(list1, list2, differences) {
     let didCell5 = didRow.insertCell(5);
 
     didCell0.innerHTML = "Byte Number";
-    didCell1.innerHTML = "Byte History";
-    didCell2.innerHTML = "Byte Current";
-    didCell3.innerHTML = "Binary History";
-    didCell4.innerHTML = "Binary Current";
+    didCell1.innerHTML = "Byte DID #1";
+    didCell2.innerHTML = "Byte DID #2";
+    didCell3.innerHTML = "Binary DID #1";
+    didCell4.innerHTML = "Binary DID #2";
     didCell5.innerHTML = "Bit Differences";
 
     let count = differences.length;
@@ -288,10 +288,10 @@ function generateDiffTable(list1, list2, differences) {
     let didCell5 = didRow.insertCell(5);
 
     didCell0.innerHTML = "Byte Number";
-    didCell1.innerHTML = "Byte History";
-    didCell2.innerHTML = "Byte Current";
-    didCell3.innerHTML = "Binary History";
-    didCell4.innerHTML = "Binary Current";
+    didCell1.innerHTML = "Byte DID #1";
+    didCell2.innerHTML = "Byte DID #2";
+    didCell3.innerHTML = "Binary DID #1";
+    didCell4.innerHTML = "Binary DID #2";
     didCell5.innerHTML = "Bit Differences";
 
     let tbleRowCount = 1;
