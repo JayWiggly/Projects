@@ -7,6 +7,7 @@ function main(){
     document.getElementById('allDataTable').innerHTML = "";
     const dh = document.getElementById('historyDID');
     const dc = document.getElementById('currentDID');
+  
 
     console.log("History = " + dh.value);
     console.log("Current = " + dc.value);
@@ -28,11 +29,13 @@ function main(){
                 printLists(currentList, "Current");
                 const matches = differenceCheck(historyList,currentList);
                 printLists(matches, "Matches");            
-                const historyLabel = paintDifferences(historyList, matches, "#EC7063", "DID #1");
-                const currentLabel = paintDifferences(currentList, matches, "#3498DB", "DID #2");
+                const historyLabel = paintDifferences(historyList, matches, "#EC7063", "DID #1 ");
+                const currentLabel = paintDifferences(currentList, matches, "#3498DB", "DID #2 ");
+                const historyLabelSpaced = historyLabel + addSpaces(dh);
+                const currentLabelSpaced = currentLabel + addSpaces(dc);   
                 document.getElementById('summaryOfChanges').innerHTML = "Summary";
-                document.getElementById('displayHistory').innerHTML = historyLabel;
-                document.getElementById('displayCurrent').innerHTML = currentLabel;
+                document.getElementById('displayHistory').innerHTML = historyLabelSpaced;
+                document.getElementById('displayCurrent').innerHTML = currentLabelSpaced;                        
                 document.getElementById('changeTable').innerHTML = "Byte Differences";
                 document.getElementById('allDataTable').innerHTML = "All Bytes";
                 document.getElementById("historyDID").value = new String();
@@ -50,6 +53,23 @@ function main(){
         document.getElementById('displayHistory').innerHTML = "Enter Valid Data In Both Fields";
         document.getElementById('displayCurrent').innerHTML = "";
     }
+}
+
+function addSpaces(val){
+    //Add Space between bytes for DET tool.
+    var len = val.value.length;
+    var spaced = new String();
+    spaced = "( "
+    console.log("addSpaces" + "val Length = " + len);
+    for (let index = 0; index < len; index++) {
+        spaced = spaced + val.value[index];
+        if ((index>0) && ((index+1) % 2 ===0)) {
+            spaced = spaced + " ";
+        }      
+    }
+    spaced = spaced + ")";
+    console.log("Spaced Text" + spaced);
+    return spaced;
 }
 
 function lengthMatchCheck(val1, val2){
