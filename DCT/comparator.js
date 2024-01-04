@@ -59,16 +59,21 @@ function addSpaces(val){
     //Add Space between bytes for DET tool.
     var len = val.value.length;
     var spaced = new String();
+    var byteCount = 0;
     spaced = "( "
     console.log("addSpaces" + "val Length = " + len);
     for (let index = 0; index < len; index++) {
         spaced = spaced + val.value[index];
         if ((index>0) && ((index+1) % 2 ===0)) {
             spaced = spaced + " ";
+            byteCount++;
         }      
     }
-    spaced = spaced + ")";
-    console.log("Spaced Text" + spaced);
+    
+    console.log("Byte Count = " + byteCount);
+    spaced = spaced + ") Count = " + byteCount;
+    console.log("Spaced Text = " + spaced);
+    
     return spaced;
 }
 
